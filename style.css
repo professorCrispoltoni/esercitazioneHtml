@@ -1,74 +1,193 @@
+/* ===== STILE GENERALE DELLA PAGINA ===== */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;   
+    /* Imposta il tipo di carattere: Arial (semplice e leggibile) */
+
+    margin: 0;                        
+    /* margin = spazio ESTERNO all'elemento
+       Qui rimuove il margine di default del browser → la pagina occupa tutto lo schermo */
+
+    background-color: #f4f4f4;        
+    /* Sfondo grigio chiaro → effetto pulito e neutro */
 }
 
+
+/* ===== HEADER (PARTE ALTA DELLA PAGINA) ===== */
 header {
-    background-color: #8b4513;  /* marrone scuro */
-    color: white;
-    text-align: center;
-    padding: 20px;
+    background-color: #8b4513;  
+    /* Colore marrone scuro → stile caldo/rustico */
+
+    color: white;               
+    /* Colore del testo */
+
+    text-align: center;         
+    /* Centra il testo orizzontalmente */
+
+    padding: 20px;              
+    /* padding = spazio INTERNO (tra contenuto e bordo)
+       Qui rende l’header più grande e arioso */
 }
 
-h1 { margin: 0; font-size: 2.2em; }
-h2 { margin: 0; font-size: 1.5em; }
 
+/* ===== TITOLI ===== */
+h1 { 
+    margin: 0;                  
+    /* Rimuove lo spazio esterno sopra e sotto */
+
+    font-size: 2.2em;           
+    /* em = unità RELATIVA
+       1em = dimensione del font base
+       2.2em = 2.2 volte più grande → titolo molto evidente */
+}
+
+h2 { 
+    margin: 0;                  
+    /* Nessuno spazio esterno */
+
+    font-size: 1.5em;           
+    /* Più piccolo di h1 → crea gerarchia visiva */
+}
+
+
+/* ===== CONTENUTO PRINCIPALE ===== */
 main {
-    background-color: white;
-    margin: 20px;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: white;                    
+    /* Sfondo bianco → effetto "card" */
+
+    margin: 20px;                               
+    /* Spazio ESTERNO → separa il blocco dal resto */
+
+    padding: 30px;                              
+    /* Spazio INTERNO → il contenuto non tocca i bordi */
+
+    border-radius: 10px;                        
+    /* Arrotonda gli angoli → design più moderno */
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);      
+    /* Ombra:
+       0 = spostamento orizzontale
+       2px = verticale
+       5px = sfocatura
+       rgba = colore con trasparenza
+       → effetto "sollevato" */
 }
 
+
+/* ===== LINK ===== */
 a {
-    color: #d2691e;
-    text-decoration: none;
-    font-weight: bold;
+    color: #d2691e;             
+    /* Colore arancione/marrone */
+
+    text-decoration: none;      
+    /* Rimuove la sottolineatura */
+
+    font-weight: bold;          
+    /* Testo più spesso (evidente) */
 }
 
-a:hover { text-decoration: underline; }
+a:hover { 
+    text-decoration: underline; 
+    /* Quando passi col mouse → compare la sottolineatura */
+}
 
+
+/* ===== GALLERIA IMMAGINI ===== */
 .galleria {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin: 20px 0;
+    display: flex;              
+    /* Attiva FLEXBOX → elementi in riga */
+
+    justify-content: center;    
+    /* Allinea orizzontalmente al centro */
+
+    align-items: center;        
+    /* Allinea verticalmente */
+
+    gap: 20px;                  
+    /* Spazio tra le immagini */
+
+    margin: 20px 0;             
+    /* Spazio sopra e sotto */
 }
 
+
+/* ===== IMMAGINI ===== */
 .galleria img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border: 3px solid #8b4513;
-    border-radius: 8px;
+    width: 200px;               
+    /* Larghezza fissa */
+
+    height: 200px;              
+    /* Altezza fissa → immagini quadrate */
+
+    object-fit: cover;          
+    /* L'immagine riempie lo spazio senza deformarsi
+       (viene ritagliata se necessario) */
+
+    border: 3px solid #8b4513;  
+    /* Bordo marrone */
+
+    border-radius: 8px;         
+    /* Angoli arrotondati */
 }
 
-.galleria img:hover {               /* EFFETTO MOUSE: +5% size */
-    transform: scale(1.05);         /* ingrandisce leggermente */
+
+/* ===== EFFETTO HOVER IMMAGINI ===== */
+.galleria img:hover {             
+    transform: scale(1.05);     
+    /* Ingrandisce del 5%
+       → effetto zoom quando passi il mouse */
 }
 
+
+/* ===== FOOTER ===== */
 footer {
-    background-color: #a0522d;  /* marrone medio */
-    color: white;
-    text-align: center;
-    padding: 15px;
-    font-size: 0.9em;
+    background-color: #a0522d;  
+    /* Marrone più chiaro */
+
+    color: white;               
+    /* Testo bianco */
+
+    text-align: center;         
+    /* Testo centrato */
+
+    padding: 15px;              
+    /* Spazio interno */
+
+    font-size: 0.9em;           
+    /* Testo leggermente più piccolo (sempre relativo con em) */
 }
 
+
+/* ===== LISTA ===== */
 ul {
-    list-style: none;
-    padding: 0;
+    list-style: none;           
+    /* Rimuove i pallini */
+
+    padding: 0;                 
+    /* Rimuove il rientro interno */
 }
 
-ul li { margin: 10px 0; }
 
+/* ===== ELEMENTI LISTA ===== */
+ul li { 
+    margin: 10px 0;             
+    /* Spazio tra gli elementi */
+}
+
+
+/* ===== LINK NELLA LISTA (EFFETTO BOTTONE) ===== */
 ul li a {
-    display: block;
-    padding: 12px;
-    background: #fff8dc;
-    border: 1px solid #d2691e;
-    border-radius: 5px;
+    display: block;             
+    /* Occupa tutta la riga → più facile da cliccare */
+
+    padding: 12px;              
+    /* Spazio interno → effetto bottone */
+
+    background: #fff8dc;        
+    /* Sfondo chiaro */
+
+    border: 1px solid #d2691e;  
+    /* Bordo arancione */
+
+    border-radius: 5px;         
+    /* Angoli arrotondati */
 }
